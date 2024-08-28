@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelText Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+    <link rel="icon" href="https://vavaquin.github.io/Index/images/srime.gif" type="image/gif">
+</head>
+<body>
+    <header>
+        <img class="cross1" src="cross2.png" alt="">
+        <img class="cross2" src="cross2.png" alt="">
+        <div class="toolbar2">
+            <button onclick="saveFile()">Save</button>
+            
+            <input type="file" id="fileInput" style="display:none;" onchange="loadFile(event)">
+            <button onclick="document.getElementById('fileInput').click()">Load</button>
+        </div>
+    </header>
+<main class="flex-center">
+    <div class="toolbar">
+        <select id="fontSelector" onchange="changeFont()">
+            <option value="'VT323', sans-serif">VT323</option>
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="'Roboto', sans-serif">Roboto</option>
+            <option value="'Open Sans', sans-serif">Open Sans</option>
+            
+           
+        </select>
+        <button onclick="execCmd('bold')"><b>Bold</b></button>
+        <button onclick="execCmd('italic')"><i>Italic</i></button>
+        <button onclick="execCmd('underline')"><u>Underline</u></button>
+        <button onclick="execCmd('insertUnorderedList')">List</button>
+        <input type="number" id="fontSizeInput" placeholder="Font Holy Size" oninput="changeFontSize()">
+        <input type="number" id="widthInput" placeholder="Sacred Width (%)" oninput="changeWidth()">
+
+    </div>
+    <div id="editor" contenteditable="true" 
+    ondragenter="handleDragEnter(event)" 
+    ondragover="handleDragOver(event)"
+    ondragleave="handleDragLeave(event)"
+    ondrop="handleDrop(event)"></div>
+    <div class="flex-row">
+        <span id="wordCount">Holy-Words: 0</span>
+        <span id="charCount">Sacred-Characters: 0</span>
+        <span id="paragraphCount">Sanctified-Paragraph: 0</span>
+    </div>
+    <div class="image-container" id="imageContainer">
+        <div class="speech-bubble" id="speechBubble"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="slime.js"></script>
+</main>
+</body>
+</html>

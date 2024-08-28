@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+    transition: all 1s;
+
+}
+
+
+body{
+    font-family: 'VT323', monospace;
+    background-color: #0a0505;
+    color: #cfbb84;
+}
+
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.toolbar {
+    width: 100%;
+    background-color: #1b0808;
+    font-family: 'VT323', monospace;
+    
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1.5px solid #ee7a48;
+}
+
+.toolbar2 {
+    width: 100%;
+    background-color: #1b0808;
+    
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    border-top: 1.5px solid #ee7a48;
+
+
+}
+
+.toolbar2 button {
+    background: 
+        url('buttonb3.png') right center no-repeat,
+        url('buttonb1.png') left center no-repeat;
+        
+
+      background-size: auto, auto;
+      image-rendering: pixelated;
+
+    margin: 0 2px;
+    padding: 10px;
+    border: none;
+    position: relative;
+    top: 5px;
+    background-color: #1a0d0d;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #cfbb84;
+    border-radius: 0px;
+    transition: all 500ms;
+
+    
+}
+
+.toolbar2 button:hover {
+    background-color: #311717;
+    color: #cfbb84;
+    transform: scale(1.1);
+}
+
+
+.toolbar button {
+    background: 
+    url('buttonb3.png') right center no-repeat,
+    url('buttonb1.png') left center no-repeat;
+    
+
+  background-size: auto, auto;
+  image-rendering: pixelated;
+
+    margin: 0 2px;
+    padding: 10px;
+    border: none;
+    background-color: #1a0d0d;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #cfbb84;
+    transition: all 500ms;
+}
+
+.toolbar button:hover {
+    background-color: #311717;
+    color: #cfbb84;
+    transform: scale(1.1);
+}
+
+
+#editor {
+    width: 80%;
+    height: 80vh;
+    border: 1px solid #cfbb84;
+    margin-top: 20px;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #141010;
+    position: relative;
+}
+
+#editor.drag-over {
+    border-color: #f2ebf8;
+    background-color: #78657c;
+}
+
+#fontSizeInput{
+    background-color: #181319;
+    color: #cfbb84;
+    border-bottom: 2px solid #df3e23;
+    border-right: 2px #df3e23;
+    border-top: 1px #cfbb84;
+    border-left: #181319;
+
+    
+}
+
+#widthInput{
+    background-color: #181319;
+    color: #cfbb84;
+    border-bottom: 2px solid #df3e23;
+    border-right: 2px #df3e23;
+    border-top: 1px #cfbb84;
+    border-left: #181319;
+    
+}
+
+
+
+#fontSelector{
+    
+    background-color: #181319;
+    color: #cfbb84;
+    border-bottom: 2px solid #df3e23;
+    border-right: 2px #df3e23;
+    border-top: 1px #cfbb84;
+    border-left: #181319;
+    
+}
+
+
+span{
+    margin: 0 20px;
+    color: #cfbb84;
+}
+
+
+
+
+.image-container {
+    position: absolute;
+    top: 80%;
+    right: 2%;
+    width: 100px;
+    height: 100px;
+    background-image: url('SlimeTemplar.gif');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .speech-bubble {
+    position: absolute;
+    bottom: 110%;
+    color: #000;
+    left: 0%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 10px;
+    background-color: #8b7760;
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: none;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #ab947a;
+    border-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -10px;
+  }
+
+.cross1{
+    display: block;
+    position: absolute;
+    width: 80px;
+    top: 5px;
+    left: 5px;
+    transition: all 1s;
+}
+
+.cross2{
+    display: block;
+    position: absolute;
+    width: 80px;
+    top: 5px;
+    right: 5px;
+    transition: all 1s;
+}
+.cross2:hover{
+    transform: scale(1.1);
+}
+.cross1:hover{
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 799px){
+    .cross1{
+        display: none;
+    }
+    .cross2{
+        display: none;
+    }
+}
