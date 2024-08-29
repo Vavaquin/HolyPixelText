@@ -226,7 +226,7 @@ span{
     position: absolute;
     width: 80px;
     top: 5px;
-    right: 5px;
+    right: 10px;
     transition: all 1s;
 }
 .cross2:hover{
@@ -236,6 +236,15 @@ span{
     transform: scale(1.1);
 }
 
+#Pause {
+    position: absolute;
+    width: 35px;
+    bottom: 30px;
+    left: 20px;
+}
+#Pause:hover{
+    transform: scale(1.1);
+}
 
 @media screen and (max-width: 799px){
     .cross1{
@@ -245,3 +254,4 @@ span{
         display: none;
     }
 }
+

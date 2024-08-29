@@ -167,4 +167,14 @@ document.addEventListener('DOMContentLoaded', function() {
     backgroundMusic.play().catch(error => {
         console.log('Autoplay failed due to browser policies:', error);
     });
+    const pauseButton = document.getElementById('Pause');
+    pauseButton.addEventListener('click', function() {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play().catch(error => {
+                console.log('Error playing music:', error);
+            });
+        } else {
+            backgroundMusic.pause();
+        }
+    });
 });
