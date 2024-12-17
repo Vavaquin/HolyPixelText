@@ -255,3 +255,40 @@ span{
     }
 }
 
+
+#menu{
+    position: absolute;
+    left: 20px;
+}
+
+#button{
+    background-color: #1b0808;
+    color: #cfbb84;
+    border-radius: 2px;
+    padding: 5px;
+    margin-bottom: 10px;
+    
+    background: 
+    url('buttonb3.png') right center no-repeat,
+    url('buttonb1.png') left center no-repeat;
+    
+
+  background-size: auto, auto;
+  image-rendering: pixelated;
+
+    padding: 10px;
+    border: none;
+    background-color: #1a0d0d;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #cfbb84;
+    transition: all 500ms;
+}
+#button:hover{
+    transform: scale(1.1);
+}
+
+#tabList{
+    margin-left: 11px;
+}
+

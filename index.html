@@ -10,6 +10,7 @@
     <link rel="icon" href="https://vavaquin.github.io/Index/images/srime.gif" type="image/gif">
 </head>
 <body>
+    
     <header>
         <img id="Pause" src="som.png" alt="">
         <img class="cross1" src="cross2.png" alt="">
@@ -39,6 +40,10 @@
         <input type="number" id="widthInput" placeholder="Sacred Width (%)" oninput="changeWidth()">
 
     </div>
+    <div id="menu">
+        <button id="button" onclick="createNewTab()">New sacred note</button>
+        <ul id="tabList"></ul>
+    </div>
     <div id="editor" contenteditable="true" 
     ondragenter="handleDragEnter(event)" 
     ondragover="handleDragOver(event)"
@@ -54,6 +59,7 @@
     </div>
     <script src="script.js"></script>
     <script src="slime.js"></script>
+    
 </main>
 </body>
 </html>
